@@ -1,0 +1,8 @@
+The trend shown in the screenshot taken of the excel graph called size_vs_seconds_graph makes sense. 
+As the file sizes get bigger, it takes a longer time to transfer all of the data.
+The main bottleneck stopping the files from transferring faster is the buffer size.
+We have it set to 256 and so the file can only transfer 256 bytes at a time which 
+means more transfers every time we multiply the size and that of course takes more time.
+To combat this, all we need to do is increase the buffer size so that more is 
+getting transferred decreasing the time it takes to transfer files.
+
